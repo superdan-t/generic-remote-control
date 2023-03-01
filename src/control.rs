@@ -52,5 +52,4 @@ mod tests {
         assert_eq!(display_name, id.get_display_name());
         assert_eq!(description, id.get_description().unwrap());
     }
-
 }
