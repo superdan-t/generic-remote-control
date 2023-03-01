@@ -35,3 +35,22 @@ impl Identifier {
         self.description.as_deref()
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::Identifier;
+
+    /// Shows creating an identifier with string slices and tests that the getters match what it was constructed with
+    #[test]
+    fn create_identifier() {
+        let name = "example.tree.endpoint";
+        let display_name = "Endpoint";
+        let description = "This is an example of an ID that can describe a control object";
+        let id = Identifier::new(name, display_name, Some(description));
+
+        assert_eq!(name, id.get_name());
+        assert_eq!(display_name, id.get_display_name());
+        assert_eq!(description, id.get_description().unwrap());
+    }
+
+}
