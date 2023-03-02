@@ -1,4 +1,4 @@
-//! Contains interfaces for input and output controls for remote devices. **This module is experimental and is likely to change.**
+//! Contains interfaces for input and output controls for remote devices.
 
 use std::string::String;
 
@@ -35,6 +35,9 @@ impl Identifier {
         self.description.as_deref()
     }
 }
+
+/// Represents a type of value provided as an input to control a remote device.
+pub struct Input {}
 
 #[cfg(test)]
 mod tests {
