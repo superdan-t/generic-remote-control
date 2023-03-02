@@ -37,7 +37,9 @@ impl Identifier {
 }
 
 /// Represents a type of value provided as an input to control a remote device.
-pub struct Input {}
+pub struct Input {
+    pub id: Identifier,
+}
 
 #[cfg(test)]
 mod tests {
